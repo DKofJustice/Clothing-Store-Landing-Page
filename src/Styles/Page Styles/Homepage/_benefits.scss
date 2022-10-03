@@ -1,0 +1,135 @@
+@use '../../../Styles/utilsForward' as *;
+
+.benefits-section {
+    margin-top: 16rem;
+
+    @include respondTo(tablet) {
+        margin-top: 22rem;
+    }
+}
+
+.benefits-titles {
+    @include flex(column, center, center);
+
+    @include respondTo(desktop) {
+        @include flex(row, center, center);
+    }
+}
+
+.benefits-titles h2 {
+    width: 28rem;
+
+    @include respondTo(desktop) {
+        width: 24rem;
+        text-align: start;
+    }
+
+    @include respondTo(large-desktop) {
+        width: 28rem;
+    }
+}
+
+.benefits-line-image {
+    margin-top: 4rem;
+    
+    @include respondTo(desktop) {
+        margin-top: 0;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-inline: 10rem;
+    }
+
+    img {
+        width: 8rem;
+        height: 100%;
+        transform: rotate(40deg);
+
+        @include respondTo(desktop) {
+            width: initial;
+            height: initial;
+        }
+    }
+}
+
+.benefits-titles-subtext {
+    width: 25rem;
+    margin-top: 4rem;
+
+    @include respondTo(desktop) {
+        width: 24rem;
+        text-align: start;
+        margin-top: 0;
+    }
+
+    @include respondTo(large-desktop) {
+        width: 26rem;
+        text-align: start;
+        margin-top: 0;
+    }
+}
+
+
+
+
+.benefits-list {
+    margin-top: 4rem;
+}
+
+.benefits-list ul {
+    list-style: none;
+    @include flex(column, center, center);
+    flex-wrap: wrap;
+
+    @include respondTo(desktop) {
+        @include flex(row, center, center);
+    }
+}
+
+.benefits-list ul li {
+    width: 22rem;
+    border-left: 3px solid $third-color;
+    margin-top: 3rem;
+    @include flex(column, flex-start, flex-start);
+
+    @include respondTo(desktop) {
+        width: 24rem;
+        margin-right: 1.5rem;
+    }
+
+    @include respondTo(large-desktop) {
+        width: 28rem;
+    }
+}
+
+.benefits-list ul li .benefit-row {
+    @include flex(row, flex-start, center);
+
+    img {
+        margin-inline: 1rem;
+    }
+
+    @include respondTo(desktop) {
+        img {
+            margin-inline: 1rem;
+        }
+    }
+
+    @include respondTo(desktop) {
+        img {
+            margin-inline: 3rem;
+        }
+    }
+}
+
+.benefits-list ul li p {
+    text-align: start;
+    width: 16rem;
+    margin-inline: 1rem;
+    margin-top: 2rem;
+
+    @include respondTo(desktop) {
+        width: 20rem;
+        margin-inline: 3rem;
+    }
+}

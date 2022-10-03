@@ -1,0 +1,220 @@
+@use '../../../Styles/utilsForward' as *;
+
+.landing-section {
+    padding-top: 12rem;
+
+    @include respondTo(desktop) {
+        padding-top: 1rem;
+    }
+}
+
+.landing-section-bkg {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    z-index: 1000;
+    transform: translateX(-10rem) rotate(60deg);
+
+    @include respondTo(tablet) {
+        transform: translateX(10rem) rotate(60deg);
+    }
+}
+
+.landing-content {
+    position: relative;
+    z-index: 3000;
+    @include flex(column, center, center);
+
+    @include respondTo(desktop) {
+        @include flex(row, center, center);
+    }
+}
+
+
+
+
+.landing-text {
+    @include respondTo(desktop) {
+        @include flex(column, center, flex-start);
+        margin-right: 20rem;
+        padding-left: 6rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-right: 50rem;
+        padding-left: 0;
+    }
+}
+
+.landing-text h1 {
+    color: $primary-text-color;
+    margin-bottom: 6rem;
+    margin-inline: 2rem;
+    font-size: $h1-400;
+
+    @include respondTo(desktop) {
+        width: 35rem;
+        margin-top: 10rem;
+        text-align: start;
+        margin-inline: 0;
+        font-size: 3.7rem;
+        @include flex(row, flex-start, center);
+    }
+
+    @include respondTo(large-desktop) {
+        font-size: $h1-500;
+    }
+}
+
+.landing-text p {
+    margin-inline: 2rem;
+    margin-bottom: 6rem;
+
+    @include respondTo(desktop) {
+        width: 25rem;
+        text-align: start;
+        margin-inline: 0;
+        @include flex(column, center, flex-start);
+    }
+}
+
+.landing-buttons button {
+    width: 9rem;
+    height: 3rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: $p-400;
+    cursor: pointer;
+
+    @include respondTo(tablet) {
+        width: 12rem;
+        height: 4rem;
+        font-size: $p-500;
+    }
+}
+
+.call-to-action {
+    border: none;
+    background-color: $call-to-action;
+    margin-right: 1rem;
+    color: white;
+    transition: 0.1s all ease-in-out;
+
+    @include respondTo(tablet) {
+        margin-right: 2rem;
+    }
+}
+
+.call-to-action:hover {
+    background-color: transparent;
+    border: 3px solid $call-to-action;
+    color: $call-to-action;
+}
+
+.shop-button {
+    background-color: transparent;
+    border: 3px solid $call-to-action;
+    color: $call-to-action;
+    transition: 0.1s all ease-in-out;
+}
+
+.shop-button:hover {
+    background-color: $call-to-action;
+    border: none;
+    color: white;
+}
+
+
+
+
+.red-jacket-illustration {
+    margin-top: 8rem;
+    margin-left: 0;
+    position: relative;
+
+    @include respondTo(desktop) {
+        margin-top: 8rem;
+        margin-left: 4rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-left: -18rem;
+        margin-right: 10rem;
+    }
+}
+
+.green-square {
+    background-color: $call-to-action;
+    width: 14rem;
+    height: 10rem;
+    position: absolute;
+    z-index: 400;
+    transform: translateX(3rem) translateY(4rem) rotate(-30deg);
+    margin-left: -4rem;
+
+    @include respondTo(desktop) {
+        width: 18rem;
+        height: 14rem;
+    }
+}
+
+.red-jacket-image {
+    position: relative;
+    z-index: 500;
+    width: 12rem;
+    height: 100%;
+
+    @include respondTo(desktop) {
+        width: initial;
+        height: initial;
+    }
+}
+
+
+
+.red-shirt-person {
+    position: relative;
+    margin-top: 8rem;
+    margin-left: -2rem;
+
+    @include respondTo(desktop) {
+        margin-top: -12rem;
+        margin-left: -22rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-left: -40rem;
+    }
+}
+
+.black-box {
+    background-color: black;
+    width: 16rem;
+    height: 12rem;
+    position: absolute;
+    z-index: 300;
+    bottom: 0.3rem;
+
+    @include respondTo(desktop) {
+        width: 34rem;
+        height: 28rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-left: 0;
+    }
+}
+
+.red-shirt-image {
+    position: relative;
+    z-index: 500;
+    width: 14rem;
+    height: 100%;
+    margin-left: 0;
+
+    @include respondTo(desktop) {
+        margin-left: -20rem;
+        width: initial;
+        height: initial;
+    }
+}

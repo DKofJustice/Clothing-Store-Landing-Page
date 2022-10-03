@@ -1,0 +1,154 @@
+@use '../../../Styles/utilsForward' as *;
+
+footer {
+    padding-block: 12rem;
+    margin-top: 10rem;
+    background-color: black;
+
+    @include respondTo(tablet) {
+        @include flex(row, center, center);
+        padding-inline: 5rem;
+        flex-wrap: wrap;
+    }
+
+    @include respondTo(desktop) {
+        flex-wrap: nowrap;
+    }
+}
+
+.logo-big img {
+    width: 10rem;
+    height: 10rem;
+}
+
+
+
+.footer-column-1 {
+    @include flex(column, center, center);
+
+    @include respondTo(desktop) {
+        margin-right: 6rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-right: 14rem;
+        margin-left: -4rem;
+    }
+}
+
+.social-list {
+    margin-top: 4rem;
+    @include flex(column, flex-start, flex-start);
+}
+
+.social-list ul {
+    @include flex(row, flex-start, center);
+    list-style: none;
+    margin-top: 4rem;
+}
+
+.social-list ul li {
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+
+
+
+.contact-info {
+    @include flex(column, center, center);
+
+    @include respondTo(desktop) {
+        @include flex(column, center, flex-start);
+    }
+}
+
+.contact-info h2 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-inline: 2rem;
+
+    @include respondTo(tablet) {
+        text-align: start;
+    }
+
+    @include respondTo(desktop) {
+        width: 30rem;
+        margin-top: 0;
+        margin-inline: 0;
+    }
+}
+
+.contact-info h3 {
+    margin-top: 4rem;
+
+    @include respondTo(desktop) {
+        margin-top: 8rem;
+        text-align: start;
+    }
+}
+
+.contact-info ul {
+    list-style: none;
+    @include flex(column, center, center);
+    color: white;
+    margin-top: 4rem;
+
+    @include respondTo(tablet) {
+        @include flex(row, flex-start, center);
+    }
+}
+
+.contact-info ul li {
+    @include flex(row, flex-start, center);
+    margin-right: 3rem;
+    margin-top: 2rem;
+
+    @include respondTo(tablet) {
+        margin-top: 0;
+    }
+}
+
+.contact-info ul li img {
+    margin-right: 1rem;
+
+    @include respondTo(desktop) {
+        margin-right: 2rem;
+    }
+}
+
+
+
+
+
+.other-links {
+    @include respondTo(desktop) {
+        @include flex(column, flex-start, flex-start);
+        margin-left: 4rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-left: 10rem;
+    }
+}
+
+.other-links ul {
+    @include flex(column, center, center);
+    margin-top: 4rem;
+
+    @include respondTo(desktop) {
+        @include flex(column, flex-start, flex-start);
+        margin-top: 0;
+    }
+}
+
+.other-links ul li {
+    list-style: none;
+    color: $font-color;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.copyright {
+    margin-top: 6rem;
+}

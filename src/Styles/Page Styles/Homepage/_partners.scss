@@ -1,0 +1,71 @@
+@use '../../../Styles/utilsForward' as *;
+
+.partner-section {
+    margin-top: 16rem;
+}
+
+.partner-title {
+    @include flex(row, center, center);
+}
+
+.arrow-lines img {
+    width: 5rem;
+    height: 100%;
+
+    @include respondTo(tablet) {
+        width: initial;
+        height: initial;
+    }
+}
+
+.partner-title h2 {
+    margin-inline: 2rem;
+
+    @include respondTo(tablet) {
+        margin-inline: 5rem;
+    }
+
+    @include respondTo(desktop) {
+        margin-inline: 10rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-inline: 20rem;
+    }
+}
+
+
+
+
+.partners {
+    width: 100%;
+    margin-top: 14rem;
+    background-color: $secondary-color;
+
+    @include respondTo(desktop) {
+        width: 110%;
+        margin-left: -3rem;
+        transform: rotate(-2deg);
+    }
+}
+
+.partners ul {
+    @include flex(column, center, center);
+    list-style: none;
+
+    @include respondTo(desktop) {
+        @include flex(row, center, center);
+    }
+}
+
+.partners ul li {
+    img {
+        width: 15rem;
+        height: 100%;
+    }
+
+    @include respondTo(desktop) {
+        transform: rotate(2deg);
+        margin-right: 6rem;
+    }
+}

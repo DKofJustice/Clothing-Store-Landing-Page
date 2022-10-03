@@ -1,0 +1,49 @@
+@use '../../Styles/utilsForward' as *;
+@use './../Page Styles/header';
+@use './../Page Styles/Homepage/homepageForward';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.App {
+    height: 100%;
+    width: 100vw;
+    font-family: 'Inter', sans-serif;
+}
+
+
+h2, h3 {
+    color: $primary-text-color;
+}
+
+h2 {
+    font-size: $h2-400;
+
+    @include respondTo(tablet) {
+        font-size: $h2-500;
+    }
+}
+
+p {
+    color: $secondary-text-color;
+    line-height: 30px;
+
+    @include respondTo(desktop) {
+        font-size: $p-500;
+    }
+}
+
+
+
+
+.homepage {
+    background-color: $primary-color;
+}

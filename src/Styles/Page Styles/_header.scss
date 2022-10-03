@@ -1,0 +1,163 @@
+@use '../../Styles/utilsForward' as *;
+
+header {
+    width: 16rem;
+    height: 100%;
+    position: fixed;
+    z-index: 5000;
+    left: -16rem;
+    background-color: #8aaba5;
+    @include flex(column, flex-start, center);
+    transition: all 0.3s ease-in-out;
+
+    @include respondTo(tablet) {
+        left: 0;
+        width: 100%;
+        height: 8rem;
+        @include flex(row, flex-start, center);
+    }
+
+    @include respondTo(desktop) {
+        @include flex(row, center, center);
+    }
+}
+
+.headerToggledOn {
+    left: 0;
+}
+
+.header-content {
+    @include flex(column, flex-start, center);
+
+    @include respondTo(tablet) {
+        width: Min(100%, 1024px);
+        @include flex(row, flex-start, center);
+    }
+
+    @include respondTo(desktop) {
+        width: 1024px;
+        padding-left: 4rem;
+    }
+
+    @include respondTo(large-desktop) {
+        width: 1400px;
+        padding-left: 0;
+    }
+}
+
+
+
+
+.header-mobile-button {
+    position: absolute;
+    top: 2rem;
+    left: 18rem;
+    cursor: pointer;
+
+    @include respondTo(tablet) {
+        display: none;
+    }
+}
+
+
+
+
+.header-logo {
+    width: 7rem;
+    height: 3rem;
+    margin-top: 3rem;
+    @include flex(column, center, center);
+
+    @include respondTo(tablet) {
+        margin-block: auto;
+        margin-left: 3rem;
+    }
+
+    @include respondTo(desktop) {
+        margin-left: -4rem;
+    }
+
+    @include respondTo(large-desktop) {
+        margin-left: 0;
+    }
+}
+
+.header-logo img {
+    width: 8rem;
+    height: 100%;
+
+    @include respondTo(desktop) {
+        width: 10rem;
+    }
+}
+
+
+
+
+header ul {
+    list-style-type: none;
+}
+
+.web-link-list {
+    width: 7rem;
+    margin-top: 5rem;
+    @include flex(column, flex-start, flex-start);
+
+    @include respondTo(tablet) {
+        width: auto;
+        margin-top: 0;
+        margin-left: auto;
+        @include flex(row, center, center);
+    }
+}
+
+.web-link-list li {
+    margin-top: 2rem;
+    transition: all 0.2s ease-in-out;
+    color: white;
+    cursor: pointer;
+
+    @include respondTo(tablet) {
+        height: 3rem;
+        margin-top: 0;
+        margin-inline: 1rem;
+        @include flex(row, center, center);
+    }
+}
+
+.web-link-list li:hover {
+    font-size: 2rem;
+}
+
+.account-list {
+    width: 7rem;
+    margin-top: 8rem;
+    @include flex(column, flex-start, flex-start);
+
+    @include respondTo(tablet) {
+        width: auto;
+        margin-top: 0;
+        margin-left: 4rem;
+        margin-right: 3rem;
+        @include flex(row, flex-start, center);
+    }
+}
+
+.account-list li {
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    @include respondTo(tablet) {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+}
+
+.account-list li img {
+    width: 3rem;
+    height: 100%;
+
+    @include respondTo(tablet) {
+        width: 2rem;
+    }
+}
